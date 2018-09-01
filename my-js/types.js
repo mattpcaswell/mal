@@ -6,9 +6,8 @@ class ListType {
 }
 
 class SymbolType {
-    constructor(name, value) {
+    constructor(value) {
         this.type = "symbol";
-        this.name = name;
         this.value = value;
     }
 }

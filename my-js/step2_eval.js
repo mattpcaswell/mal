@@ -22,7 +22,7 @@ function eval_ast(ast, env) {
     case "list":
 	return new ListType(ast.value.map((member) => EVAL(member)));
     case "symbol":
-	return repl_env[ast.name];
+	return repl_env[ast.value];
     default:
 	return ast;
     }

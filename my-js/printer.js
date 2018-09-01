@@ -15,7 +15,7 @@ function pr_str(structure) {
         output += ")";
     } else if (structure.type == "symbol") {
         // Its a symbol
-        output = structure.name;
+        output = structure.value;
     } else {
         // Its a number
         output = "" + structure.value;

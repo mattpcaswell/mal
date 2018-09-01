@@ -64,7 +64,9 @@ function read_list(reader) {
 }
 
 function read_atom(reader) {
-    return new LiteralType(reader.next());
+    if (isNaN(reader.peek()))
+	return new SymbolType(reader.next());
+    return new LiteralType(Number(reader.next()));
 }
 
 module.exports = read_str;
